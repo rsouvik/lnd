@@ -111,7 +111,7 @@ func (f *FullIntent) CompileFundingTx(extraInputs []*wire.TxIn,
 		HashType:  txscript.SigHashAll,
 		SigHashes: txscript.NewTxSigHashes(fundingTx),
 	}
-	for i, txIn := range fundingTx.TxIn {
+	for i, txIn := range fundingTx.TxIn100 {
 		// We can only sign this input if it's ours, so we'll ask the
 		// coin source if it can map this outpoint into a coin we own.
 		// If not, then we'll continue as it isn't our input.
