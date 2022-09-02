@@ -150,7 +150,7 @@ func (f *FullIntent) CompileFundingTx(extraInputs []*wire.TxIn,
 		Index: multiSigIndex,
 	}
 
-	return fundingTx1000, nil
+	return fundingTx, nil
 }
 
 // Inputs returns all inputs to the final funding transaction that we
@@ -218,6 +218,7 @@ type WalletConfig struct {
 // entirety of the funding transaction within the wallet. This implements the
 // typical funding flow that is initiated either on the p2p level or using the
 // CLi.
+//test check
 type WalletAssembler struct {
 	cfg WalletConfig
 }
